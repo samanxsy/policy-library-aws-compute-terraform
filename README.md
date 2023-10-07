@@ -1,2 +1,1 @@
-# policy-library-aws-compute-terraform
-AWS Compute Sentinel Policies
+# AWS Compute Sentinel Policies
