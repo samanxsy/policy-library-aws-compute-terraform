@@ -33,6 +33,7 @@ resource_changes = {
 				"tags": {
 					"Environment":  "Dev",
 					"Name": "ec2",
+					"Checking": "Testing",
 				},
 				"tags_all": {
 					"Environment":  "Dev",

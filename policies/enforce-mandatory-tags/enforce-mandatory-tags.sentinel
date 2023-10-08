@@ -17,7 +17,7 @@ ec2_instances = filter tfplan.resource_changes as _, resource {
 # Enforcing Mandatory Tags
 deny_resources_without_mandatory_tags = rule {
     all ec2_instances as _, instances {
-        all instances.change.after.tags as key, value {
+        any instances.change.after.tags as key, value {
             key in mandatory_tags
         }
     }
