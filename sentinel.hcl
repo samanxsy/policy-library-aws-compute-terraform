@@ -17,9 +17,9 @@ policy "enforce-volume-encryption" {
     enforcement_level = "soft-mandatory"
 }
 
-policy "restrict-instance-termination" {
-    source = "./policies/restrict-instance-termination/restrict-instance-termination.sentinel"
-    enforcement_level = "advisory"
+policy "restrict-instance-volume-termination" {
+    source = "./policies/restrict-instance-volume-termination/restrict-instance-volume-termination.sentinel"
+    enforcement_level = "soft-mandatory"
 }
 
 policy "restrict-instance-types" {

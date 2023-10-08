@@ -1,0 +1,38 @@
+# Restricting instance volume termination on 
+# Production Environments
+
+# This Policy uses tfplan/v2 as the data source
+import "tfplan/v2" as tfplan
+
+# Mandatory Environment Tags
+prod_tags = [ "prod" ]
+
+# Filtering all of 'aws_instance' resources from the plan file
+ec2_instances = filter tfplan.resource_changes as _, resource {
+    resource.mode == "managed" and
+    resource.type == "aws_instance" and
+    (resource.change.actions contains "create" or resource.change.actions == ["update"])
+}
+
+# Checking if the Environment tag is labled as production
+is_prod_environment = rule {
+    all ec2_instances as _, instances {
+        any instances.change.after.tags as key, value {
+            value in prod_tags
+        }
+    }
+}
+
+# Denying volume termination if the environment is labled as production
+deny_instance_volume_termination_in_prod = rule when is_prod_environment {
+    all ec2_instances as _, instances {
+        all instances.change.after.root_block_device as rbd {
+            rbd.delete_on_termination is false
+        }
+    }
+}
+
+# Main Rule
+main = rule {
+    deny_instance_volume_termination_in_prod
+}
