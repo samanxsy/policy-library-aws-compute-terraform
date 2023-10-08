@@ -18,7 +18,7 @@ policy "enforce-volume-encryption" {
 }
 
 policy "restrict-instance-volume-termination" {
-    source = "./policies/restrict-instance-volume-termination/restrict-instance-volume-termination.sentinel"
+    source = "./policies/restrict-volume-termination-in-production/restrict-volume-termination-in-production.sentinel"
     enforcement_level = "soft-mandatory"
 }
 
