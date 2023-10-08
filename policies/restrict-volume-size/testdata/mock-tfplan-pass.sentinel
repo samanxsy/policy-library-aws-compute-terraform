@@ -22,7 +22,7 @@ resource_changes = {
 						"delete_on_termination": true,
 						"encrypted":             true,
 						"tags":                  null,
-						"volume_size":           50,
+						"volume_size":           15,
 					},
 				],
 				"security_groups": [
