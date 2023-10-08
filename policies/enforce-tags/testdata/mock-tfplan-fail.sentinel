@@ -31,12 +31,12 @@ resource_changes = {
 				"source_dest_check": true,
 				"subnet_id":         "subnet-08e6a5a25f584f142",
 				"tags": {
-					"Environment":  "Dev",
-					"Name": "ec2",
+					"Random":  "Dev",
+					"Tags": "ec2",
 				},
 				"tags_all": {
-					"Environment":  "Dev",
-					"Name": "ec2",
+					"Random":  "Dev",
+					"Tags": "ec2",
 				},
 				"timeouts":                    null,
 				"user_data_replace_on_change": false,
