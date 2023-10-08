@@ -20,7 +20,7 @@ resource_changes = {
 				"root_block_device": [
 					{
 						"delete_on_termination": true,
-						"encrypted":             true,
+						"encrypted":             false,
 						"tags":                  null,
 						"volume_size":           50,
 					},
