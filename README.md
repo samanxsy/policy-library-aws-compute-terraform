@@ -6,11 +6,11 @@ Welcome to the AWS Compute Sentinel Policies library for managing AWS EC2 instan
 [![Terraform](https://img.shields.io/badge/Terraform-white)](https://app.terraform.io/) 
 
 # Policies included
-- restricing volume termination in prod **based on Environment tag** | [Code](https://github.com/samanxsy/policy-library-aws-compute-terraform/blob/master/policies/restrict-volume-termination-in-production/restrict-volume-termination-in-production.sentinel)
-- restrict volume size | [Code](https://github.com/samanxsy/policy-library-aws-compute-terraform/blob/master/policies/restrict-volume-size/restrict-volume-size.sentinel)
-- restrict instance types for development and testing **based on Environment tag** | [Code](https://github.com/samanxsy/policy-library-aws-compute-terraform/blob/master/policies/restrict-instance-types/restrict-instance-types.sentinel)
-- enforce volume encryption | [Code](https://github.com/samanxsy/policy-library-aws-compute-terraform/blob/master/policies/enforce-volume-encryption/enforce-volume-encryption.sentinel)
-- enforce mandatory tags | [Code](https://github.com/samanxsy/policy-library-aws-compute-terraform/blob/master/policies/enforce-mandatory-tags/enforce-mandatory-tags.sentinel)
+- restricting volume termination in prod **based on Environment tag** | [Code](https://github.com/samanxsy/policy-library-aws-compute-terraform/blob/master/policies/restrict-volume-termination-in-production/restrict-volume-termination-in-production.sentinel)
+- restricting volume size | [Code](https://github.com/samanxsy/policy-library-aws-compute-terraform/blob/master/policies/restrict-volume-size/restrict-volume-size.sentinel)
+- restricting instance types for development and testing **based on Environment tag** | [Code](https://github.com/samanxsy/policy-library-aws-compute-terraform/blob/master/policies/restrict-instance-types/restrict-instance-types.sentinel)
+- enforcing volume encryption | [Code](https://github.com/samanxsy/policy-library-aws-compute-terraform/blob/master/policies/enforce-volume-encryption/enforce-volume-encryption.sentinel)
+- enforcing mandatory tags | [Code](https://github.com/samanxsy/policy-library-aws-compute-terraform/blob/master/policies/enforce-mandatory-tags/enforce-mandatory-tags.sentinel)
 - denying public ip association to instances | [Code](https://github.com/samanxsy/policy-library-aws-compute-terraform/blob/master/policies/deny-public-ip-association/deny-public-ip-association.sentinel)
 ---
 
