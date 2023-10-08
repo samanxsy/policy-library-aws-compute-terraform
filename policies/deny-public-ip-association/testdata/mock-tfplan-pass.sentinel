@@ -9,7 +9,7 @@ resource_changes = {
 			],
 			"after": {
 				"ami": "ami-0ec7f9846da6b0f61",
-				"associate_public_ip_address": true,
+				"associate_public_ip_address": false,
 				"availability_zone":           "eu-central-1a",
 				"credit_specification":        [],
 				"get_password_data":           false,
