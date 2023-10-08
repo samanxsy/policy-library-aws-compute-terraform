@@ -7,8 +7,8 @@ policy "deny-public-ip-association" {
     enforcement_level = "hard-mandatory"
 }
 
-policy "enforce-tags" {
-    source = "./policies/enforce-tags/enforce-tags.sentinel"
+policy "enforce-mandatory-tags" {
+    source = "./policies/enforce-mandatory-tags/enforce-mandatory-tags.sentinel"
     enforcement_level = "soft-mandatory"
 }
 
@@ -17,7 +17,7 @@ policy "enforce-volume-encryption" {
     enforcement_level = "soft-mandatory"
 }
 
-policy "restrict-instance-volume-termination" {
+policy "restrict-volume-termination-in-production" {
     source = "./policies/restrict-volume-termination-in-production/restrict-volume-termination-in-production.sentinel"
     enforcement_level = "soft-mandatory"
 }
