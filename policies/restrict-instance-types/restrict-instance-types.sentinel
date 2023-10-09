@@ -3,6 +3,7 @@
 
 # This Policy uses tfplan/v2 as the data source
 import "tfplan/v2" as tfplan
+import "strings"
 
 # Allowed instance types for testing and development
 allowed_instance_types = ["t2.micro", "t2.medium"]
@@ -21,7 +22,7 @@ ec2_instances = filter tfplan.resource_changes as _, resource {
 is_dev_environment = rule {
 	all ec2_instances as _, instances {
 		any instances.change.after.tags as key, value {
-			value in dev_environment_tags
+			strings.to_lower(value) in dev_environment_tags
 		}
 	}
 }

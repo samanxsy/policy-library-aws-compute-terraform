@@ -31,11 +31,11 @@ resource_changes = {
 				"source_dest_check": true,
 				"subnet_id":         "subnet-08e6a5a25f584f142",
 				"tags": {
-					"Environment":  "prod",
+					"Environment":  "PROD",
 					"Name": "ec2",
 				},
 				"tags_all": {
-					"Environment":  "prod",
+					"Environment":  "PROD",
 					"Name": "ec2",
 				},
 				"timeouts":                    null,

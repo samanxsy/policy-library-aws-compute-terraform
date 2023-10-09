@@ -3,6 +3,7 @@
 
 # This Policy uses tfplan/v2 as the data source
 import "tfplan/v2" as tfplan
+import "strings"
 
 # Checking Mandatory Environment Tags
 prod_tags = ["prod"]
@@ -18,7 +19,7 @@ ec2_instances = filter tfplan.resource_changes as _, resource {
 is_prod_environment = rule {
 	all ec2_instances as _, instances {
 		any instances.change.after.tags as key, value {
-			value in prod_tags
+			strings.to_lower(value) in prod_tags
 		}
 	}
 }
