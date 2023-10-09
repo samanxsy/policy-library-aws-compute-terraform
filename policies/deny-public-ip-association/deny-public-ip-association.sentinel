@@ -6,19 +6,19 @@ import "tfplan/v2" as tfplan
 
 # Filtering all of 'aws_instance' resources from the plan file
 ec2_instances = filter tfplan.resource_changes as _, resource {
-    resource.mode == "managed" and
-    resource.type == "aws_instance" and
-    (resource.change.actions contains "create" or resource.change.actions == ["update"])
+	resource.mode == "managed" and
+		resource.type == "aws_instance" and
+		(resource.change.actions contains "create" or resource.change.actions == ["update"])
 }
 
 # Denying public IP association for ec2 instances
 deny_public_ip_association_for_instances = rule {
-    all ec2_instances as _, instances {
-        instances.change.after.associate_public_ip_address is false
-    }
+	all ec2_instances as _, instances {
+		instances.change.after.associate_public_ip_address is false
+	}
 }
 
 # Main Policy
 main = rule {
-    deny_public_ip_association_for_instances
+	deny_public_ip_association_for_instances
 }

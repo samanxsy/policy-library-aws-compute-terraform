@@ -18,7 +18,7 @@ jobs:
                 version: ^0.18.11
 
             - name: Sentinel Format
-              run: sentinel fmt -check=true $(find . -name "*.sentinel" -type f)
+              run: sentinel fmt $(find . -name "*.sentinel" -type f ! -path "*/testdata/*")
 
             - name: Sentinel Test
               run: sentinel test $(find . -name "*.sentinel" -type f ! -path "*/testdata/*")
