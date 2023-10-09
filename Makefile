@@ -28,5 +28,5 @@ restrict-volume-size:
 
 # restrict volume termination in production environment
 .PHONY: restrict-volume-termination-in-production
-restrict-volume-termination:
+restrict-volume-termination-in-production:
 	sentinel test policies/restrict-volume-termination-in-production/restrict-volume-termination-in-production.sentinel
