@@ -1,6 +1,8 @@
 # AWS Compute Sentinel Policies for Terraform
 Welcome to the AWS Compute Sentinel Policies library for managing AWS EC2 instances provisioned through Terraform. In this library, you can find policies that can be seamlessly implemented with Terraform Cloud and Terraform Enterprise to enhance your infrastructure provisioning and management processes.  
 
+[![sentinel-ci](https://github.com/samanxsy/policy-library-aws-compute-terraform/actions/workflows/sentinel-ci.yml/badge.svg)](https://github.com/samanxsy/policy-library-aws-compute-terraform/actions/workflows/sentinel-ci.yml)
+
 [![Sentinel](https://img.shields.io/badge/Sentinel-white)](https://www.hashicorp.com/sentinel)
 [![Terraform](https://img.shields.io/badge/Terraform-white)](https://app.terraform.io/) 
 
@@ -22,7 +24,7 @@ Welcome to the AWS Compute Sentinel Policies library for managing AWS EC2 instan
 - denying public ip association to instances | [Code](https://github.com/samanxsy/policy-library-aws-compute-terraform/blob/master/policies/deny-public-ip-association/deny-public-ip-association.sentinel)
 
 ### Testing the policies
-To simplify running `sentinel test` for each policy, a [Makefile]() has been created that helps running **`sentinel test <policy-path>`** command in a shorter format from the repo root directory:
+To simplify running the `sentinel test` for each policy, a [Makefile]() has been created that helps run the **`sentinel test <policy-path>`** command in a shorter format from the repo root directory:
 ```
 # Format
 make <policy-directory-name>
